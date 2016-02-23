@@ -1,0 +1,20 @@
+// dot staging.dot -T jpg -O
+digraph staging {
+  a [label="not modified,\nversion A"];
+  b [label="unstaged",color=red];
+  c [label="staged",color=green];
+  d [label="not modified,\nversion B"]
+
+  a -> b [label="<modify file>"];
+  b -> c [label="git add <file>"];
+  b -> d [label="git commit <file>"]
+  c -> d [label="git commit <file>"]
+
+  c -> b [label="git reset <file>"]
+  b -> a [label="git checkout <file>"]
+
+  d -> c [label="git reset --soft HEAD~"]
+  d -> b [label="git reset HEAD~"]
+  d -> a [label="git reset --hard HEAD~"]
+}
+
