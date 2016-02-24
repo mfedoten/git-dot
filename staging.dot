@@ -3,10 +3,10 @@ digraph staging {
   labelloc="t"
   label="Undoing commits in Git\nNick Desaulniers"
 
-  a [label="not modified,\nversion A"];
+  a [label="not modified\nversion A"];
   b [label="unstaged",color=red];
   c [label="staged",color=green];
-  d [label="not modified,\nversion B"]
+  d [label="not modified\nversion B"]
 
   a -> b [label="<modify file>"];
 
