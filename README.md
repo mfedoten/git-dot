@@ -1,5 +1,7 @@
 A dot file that generates a git workflow graph.
 
+![undoing commit in git](https://cdn.rawgit.com/nickdesaulniers/git-dot/master/staging.dot.svg)
+
 Copyright 2016 Google Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
